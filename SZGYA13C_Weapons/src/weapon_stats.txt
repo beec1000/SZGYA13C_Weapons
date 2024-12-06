@@ -1,0 +1,25 @@
+﻿Id;Name;Type;MinDmg;MaxDmg;AttackSpeed;Range;OffHandWeaponAttackChance;Strength;Dexterity;Wisdom;Perception;HitChance;StunChance;HeavyAttackChance
+1;Excalibur;Sword;50;150;1,2;2;-;10;8;5;7;85;10;6
+2;Dragon Slayer;Sword;60;180;1,3;2;-;12;7;6;8;80;15;9
+3;Silver Sword;Sword;30;90;1,1;2;-;8;6;4;7;88;5;4
+4;Colossus;Greatsword;80;250;1,5;4;-;8;4;5;3;75;12;3
+5;Titan Blade;Greatsword;100;300;1,6;4;-;7;10;5;6;70;10;15
+6;Stormbringer;Greatsword;70;210;1,4;4;-;6;5;4;7;80;14;2
+7;Assassin's Dagger;Daggers;25;75;1,7;3;-;6;8;5;6;90;20;30
+8;Shadow Fang;Daggers;30;90;1,8;3;-;5;7;6;9;92;18;3
+9;Silver Fang;Daggers;20;60;1,6;3;-;4;5;3;8;85;15;7
+10;Hunter's Longbow;Longbow;40;120;2,0;18;-;8;6;5;9;90;25;5
+11;Elven Bow;Longbow;45;135;1,8;18;-;6;8;4;7;87;20;2
+12;Bow of the Phoenix;Longbow;50;150;1,9;18;-;7;9;5;8;80;15;9
+13;Crossbow of Accuracy;Crossbow;40;120;1,5;12;20;10;8;5;6;75;18;25
+14;Hand Crossbow;Crossbow;25;75;1,3;12;25;6;6;4;7;80;15;3
+15;Storm Crossbow;Crossbow;35;105;1,6;12;30;8;9;7;5;70;12;30
+16;Ancient Wand;Wand;15;45;1,1;14;-;5;7;6;8;85;10;2
+17;Wand of Fire;Wand;20;60;1,2;14;-;6;9;8;10;90;8;15
+18;Magic Wand;Wand;10;30;1,0;14;-;4;6;5;7;75;12;1
+19;Wizard's Staff;Staff;25;80;1,0;17;-;8;6;5;7;80;15;15
+20;Staff of Light;Staff;30;90;1,1;17;-;9;8;7;10;70;10;4
+21;Elder Staff;Staff;20;60;1,2;17;-;7;9;6;8;75;12;3
+22;Spear of Destiny;Spear;40;120;1,4;5;-;10;5;5;6;85;10;25
+23;Royal Spear;Spear;50;150;1,5;5;-;9;7;6;7;80;8;6
+24;Swift Spear;Spear;35;105;1,3;5;-;6;9;4;8;82;12;5
