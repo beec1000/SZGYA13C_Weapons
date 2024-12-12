@@ -5,9 +5,9 @@
 4;Colossus;Greatsword;80;250;1,5;4;-;8;4;5;3;75;12;3
 5;Titan Blade;Greatsword;100;300;1,6;4;-;7;10;5;6;70;10;15
 6;Stormbringer;Greatsword;70;210;1,4;4;-;6;5;4;7;80;14;2
-7;Assassin's Dagger;Daggers;25;75;1,7;3;-;6;8;5;6;90;20;30
-8;Shadow Fang;Daggers;30;90;1,8;3;-;5;7;6;9;92;18;3
-9;Silver Fang;Daggers;20;60;1,6;3;-;4;5;3;8;85;15;7
+7;Assassin's Dagger;Daggers;25;75;1,7;3;25;6;8;5;6;90;20;30
+8;Shadow Fang;Daggers;30;90;1,8;3;20;5;7;6;9;92;18;3
+9;Silver Fang;Daggers;20;60;1,6;3;15;4;5;3;8;85;15;7
 10;Hunter's Longbow;Longbow;40;120;2,0;18;-;8;6;5;9;90;25;5
 11;Elven Bow;Longbow;45;135;1,8;18;-;6;8;4;7;87;20;2
 12;Bow of the Phoenix;Longbow;50;150;1,9;18;-;7;9;5;8;80;15;9

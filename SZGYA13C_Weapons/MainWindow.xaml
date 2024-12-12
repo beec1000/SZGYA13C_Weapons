@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SZGYA13C_Weapons"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="900">
+        Title="MainWindow" Height="500" Width="1100">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
@@ -20,7 +20,7 @@
 
         <StackPanel VerticalAlignment="Center" Grid.Column="0" Grid.Row="0">
             <TextBlock Text="Select Weapon Type:" HorizontalAlignment="Center" />
-            <ComboBox x:Name="WeaponTypeComboBox" SelectionChanged="WeaponTypeComboBox_SelectionChanged" Width="150">
+            <ComboBox x:Name="WeaponTypeComboBox" SelectionChanged="WeaponTypeComboBox_SelectionChanged" Width="120">
                 <ComboBoxItem Content="All" />
                 <ComboBoxItem Content="Sword" />
                 <ComboBoxItem Content="Greatsword" />
@@ -31,6 +31,34 @@
                 <ComboBoxItem Content="Staff" />
                 <ComboBoxItem Content="Spear" />
             </ComboBox>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Center" Grid.Column="0" Grid.Row="1">
+            <TextBlock Text="Select Weapon Attribute:" HorizontalAlignment="Center" />
+            <ComboBox x:Name="WeaponAttributesComboBox" SelectionChanged="WeaponAttributeComboBox_SelectionChanged" Width="120">
+                <ComboBoxItem Content="All" />
+                <ComboBoxItem Content="Strength" />
+                <ComboBoxItem Content="Dexterity" />
+                <ComboBoxItem Content="Wisdom" />
+                <ComboBoxItem Content="Perception" />
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Center" Grid.Column="0" Grid.Row="2">
+            <TextBlock Text="Select Weapon Chance:" HorizontalAlignment="Center" />
+            <ComboBox x:Name="WeaponChanceComboBox" SelectionChanged="WeaponChanceComboBox_SelectionChanged" Width="120">
+                <ComboBoxItem Content="All" />
+                <ComboBoxItem Content="Hit Chance" />
+                <ComboBoxItem Content="Heavy Attack Chance" />
+                <ComboBoxItem Content="Stun Chance" />
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Center" Grid.Column="0" Grid.Row="3">
+            <TextBlock Text="Minimum Damage:" HorizontalAlignment="Center" />
+            <TextBox x:Name="MinDamageTextBox" Width="30" HorizontalAlignment="Center" TextAlignment="Center" TextChanged="DamageTextBox_TextChanged" />
+            <TextBlock Text="Maximum Damage:" HorizontalAlignment="Center" />
+            <TextBox x:Name="MaxDamageTextBox" Width="30" HorizontalAlignment="Center" TextAlignment="Center" TextChanged="DamageTextBox_TextChanged" />
         </StackPanel>
 
         <GroupBox Grid.Column="1" Grid.RowSpan="4">
@@ -71,7 +99,6 @@
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
 
-                        <!-- Off Hand Weapon Attack Chance with Line Breaks in Header -->
                         <DataGridTextColumn>
                             <DataGridTextColumn.Header>
                                 <TextBlock TextAlignment="Center" HorizontalAlignment="Center">
@@ -127,7 +154,17 @@
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
-                        <DataGridTextColumn Header="Heavy Attack Chance" Binding="{Binding Chances.HeavyAttackChance}">
+                        <DataGridTextColumn>
+                            <DataGridTextColumn.Header>
+                                <TextBlock TextAlignment="Center" HorizontalAlignment="Center">
+                                    <Run Text="Heavy" />
+                                    <LineBreak />
+                                    <Run Text="Attack Chance" />
+                                </TextBlock>
+                            </DataGridTextColumn.Header>
+                            <DataGridTextColumn.Binding>
+                                <Binding Path="Chances.HeavyAttackChance" />
+                            </DataGridTextColumn.Binding>
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="TextBlock">
                                     <Setter Property="HorizontalAlignment" Value="Center"/>
