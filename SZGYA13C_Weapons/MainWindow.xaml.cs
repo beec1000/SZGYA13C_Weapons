@@ -24,8 +24,8 @@ namespace SZGYA13C_Weapons
             WeaponTypeComboBox.SelectedIndex = 0;
             WeaponAttributesComboBox.SelectedIndex = 0;
             WeaponChanceComboBox.SelectedIndex = 0;
-            MinDamageTextBox.Text = "";
-            MaxDamageTextBox.Text = "";
+            MinDamageTextBox.Text = string.Empty;
+            MaxDamageTextBox.Text = string.Empty;
             ExtraStats.ItemsSource = weapons;
         }
 
@@ -42,6 +42,15 @@ namespace SZGYA13C_Weapons
         private void WeaponAttributeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             selectedAttribute = (WeaponAttributesComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
+            if (selectedAttribute != "All")
+            {
+                WeaponChanceComboBox.IsEnabled = false;
+                selectedChance = "All";
+            }
+            else
+            {
+                WeaponChanceComboBox.IsEnabled = true;
+            }
             ApplyFilters();
         }
 
@@ -95,6 +104,8 @@ namespace SZGYA13C_Weapons
             }
 
             ExtraStats.ItemsSource = filteredWeapons.ToList();
+            weaponCount.Content = $"Weapons that match: {filteredWeapons.Count()}";
+            UpdateResetButtonState();
         }
 
         private int GetAttributeValue(Weapon weapon, string attribute)
@@ -127,6 +138,20 @@ namespace SZGYA13C_Weapons
                 default:
                     return 0;
             }
+        }
+
+        private void UpdateResetButtonState()
+        {
+            resetSelectionsBTN.IsEnabled = !(selectedWeaponType == "All" && selectedAttribute == "All" && selectedChance == "All" && string.IsNullOrEmpty(MinDamageTextBox.Text) && string.IsNullOrEmpty(MaxDamageTextBox.Text));
+        }
+
+        private void resetSelectionsBTN_Click(object sender, RoutedEventArgs e)
+        {
+            selectedWeaponType = "All";
+            selectedAttribute = "All";
+            selectedChance = "All";
+            MinDamageTextBox.Clear();
+            MaxDamageTextBox.Clear();
         }
     }
 }
