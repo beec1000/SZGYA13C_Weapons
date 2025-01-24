@@ -147,9 +147,9 @@ namespace SZGYA13C_Weapons
 
         private void resetSelectionsBTN_Click(object sender, RoutedEventArgs e)
         {
-            selectedWeaponType = "All";
-            selectedAttribute = "All";
-            selectedChance = "All";
+            WeaponTypeComboBox.SelectedIndex = 0;
+            WeaponAttributesComboBox.SelectedIndex = 0;
+            WeaponChanceComboBox.SelectedIndex = 0;
             MinDamageTextBox.Clear();
             MaxDamageTextBox.Clear();
         }
